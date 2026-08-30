@@ -23,6 +23,8 @@ The following is a list of all the services on the server:
 - **systemd-resolved**: Responsible for DNS resolution ***(Essential)***
 - **systemd-udevd**: Detects/manages hardware devices ***(Essential)***
 - **udisks2**: Manages storage devices/disks ***(Use Requires Investigation)***
+- **unattended-upgrades**: Handles automatic package updates ***(Essential)***
+- **user@1000**: User manager for UID 1000 ***(Essential)***
 
 # Service Requirement Investigation Results
 The following are the findings and conclusions drawn from the investigation into whether certain services are actually essential or not. Disabling non-essential services ensures that vulnerabilities aren't introduced due to the presence of non-essential services on the system.
@@ -37,5 +39,12 @@ The following are the findings and conclusions drawn from the investigation into
 - multipathd is a system daemon that manages multiple paths to the same storage device. It is typically used with enterprise SAN/storage systems.
 - The server only uses a single disk setup and the presence of multipath devices was checked by running the ***sudo multipath -ll*** which resulted in ***No multipath devices found***.
 - Due to these reasons, the multipathd service was **disabled**.
+
+## networkd-dispatcher
+- networkd-dispatcher is a system daemon in Linux that automatically runs scripts in response to network state changes.
+- Network connections are handled by systemd, so networkd-dispatcher isn't required and hence networkd-disptacher was **disabled**.
+
+## udisks2
+
 
   
