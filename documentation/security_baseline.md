@@ -12,7 +12,7 @@ The following is a list of all the services on the server:
 - **cron**: Responsible for scheduled/background tasks ***(Essential)***
 - **dbus**: Allows system applications/services to communicate with eachother ***(Essential)***
 - **getty@tty1**: Provides the local text login console ***(Essential)***
-- **ModemManager**: Manages cellular/mobile broadband modems ***(Utility Requires Investigation)***
+- **ModemManager**: Manages cellular/mobile broadband modems ***(Use Requires Investigation)***
 - **multipathd**: Manages multiple paths to the same storage device ***(Use Requires Investigation)***
 - **networkd-dispatcher**: Runs scripts in response to network state changes ***(Use Requires Investigation)***
 - **polkit**: Controls authorization for certain privileged operations ***(Essential)***
@@ -45,6 +45,18 @@ The following are the findings and conclusions drawn from the investigation into
 - Network connections are handled by systemd, so networkd-dispatcher isn't required and hence networkd-disptacher was **disabled**.
 
 ## udisks2
+- It is a headless backend daemon that manages USB devices, external hard drives, and SD cards effortlesssly.
+- Allows for safe Ejecting and Unmounting from the desktop interface and hence left it **enabled**.
+
+# Open Ports
+The following is a list of all the open ports and their use cases:
+- **22/tcp**: Used for remote administration via SSH.
+- **139/tcp**: Required for **netbios-ssn** which is a legacy network protocol used by Windows machines to share files over a local network. This allows legacy machines to use the NAS for file sharing.
+- **445/tcp**: Required for **microsoft-ds**, the modern network protocol used by Windows and Linux systems to share files, folders over a local network.
+
+# Firewall
+The Ubuntu server utilizes a UFW (Un)
+
 
 
   
