@@ -4,7 +4,7 @@ The following information contains the details on the baseline security stance o
 The version of Ubuntu Server was **26.04 LTS** with the **Linux 7.0.0-27-generic** kernel
 
 # Users
-The server only had three users: **amaljp**, **alice**, and **bob**. A lower user count helps minimize the attack surface and hence lowers the risk of a threat attacker gaining access via stolen credentials.
+The server only had three users: **amaljp** ***(administrative account)***, **alice** ***(standard NAS user)***, and **bob** ***(standard NAS user)***. A lower user count helps minimize the attack surface and hence lowers the risk of a threat attacker gaining access via stolen credentials.
 
 # Services
 The following is a list of all the services on the server:
@@ -45,7 +45,7 @@ The following are the findings and conclusions drawn from the investigation into
 - Network connections are handled by systemd, so networkd-dispatcher isn't required and hence networkd-disptacher was **disabled**.
 
 ## udisks2
-- It is a headless backend daemon that manages USB devices, external hard drives, and SD cards effortlesssly.
+- It is a headless backend daemon that manages USB devices, external hard drives, and SD cards effortlessly.
 - Allows for safe Ejecting and Unmounting from the desktop interface and hence left it **enabled**.
 
 # Open Ports
@@ -55,7 +55,13 @@ The following is a list of all the open ports and their use cases:
 - **445/tcp**: Required for **microsoft-ds**, the modern network protocol used by Windows and Linux systems to share files, folders over a local network.
 
 # Firewall
-The Ubuntu server utilizes a UFW (Un)
+The Ubuntu server utilizes a UFW (Uncomplicated Firewall). UFW allows you to secure your system using simple, human-readable commands instead of complicated syntax.
+- **Status**: Active
+- **Default incoming**: Denied
+- **Default outgoing**: Allowed
+- **SSH**: tcp 22 
+- **Samba**: tcp 445 
+
 
 
 
