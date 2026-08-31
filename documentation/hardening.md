@@ -9,7 +9,7 @@ The hardening process involved the following steps:
 6. Securing Samba
 
 ## Documenting the base system
-The base system was documented [Security Baseline](security_baseline.md) by recording the version and kernel of Ubuntu Server that was utilized, services that are running, open ports and the default UFW configuration.
+The base system was documented [Security Baseline](security_baseline.md#Services) by recording the version and kernel of Ubuntu Server that was utilized, services that are running, open ports and the default UFW configuration.
 
 ## Updating the system
 - Using the ***sudo apt update*** command, the list of available software packages was updated. These updates were then installed using the ***sudo apt upgrade*** command.
