@@ -19,6 +19,7 @@ The base system was documented in the [security baseline](security_baseline.md) 
 - The ***apt-mark showmanual*** command was run to display all the explicitly installed packages.
 - All of these packages are essential and hence should not be removed.
 - The services whose utility required investigation in [Services](security_baseline.md#Services) are mentioned below:
+  - eifjei
 
 
 
