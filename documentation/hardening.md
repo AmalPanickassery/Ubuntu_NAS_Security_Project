@@ -19,7 +19,23 @@ The base system was documented in the [security baseline](security_baseline.md) 
 - The ***apt-mark showmanual*** command was run to display all the explicitly installed packages.
 - All of these packages are essential and hence should not be removed.
 - The services whose utility required investigation in [Services](security_baseline.md#Services) are mentioned below:
-  - eifjei
+### ModemManager
+  - ModemManager is a system daemon in Linux that controls mobile broadband devices. It provides a unified way to configure and manage cellular modems.
+  - The network connection for the NAS is provided by the **VirtualBox** virtual Ethernet adapter. Therefore, ModemManager is **not required**.
+  - The presence of a cellular modem was also checked by running the ***mmcli -L*** command which resulted in ***No modems were found***.
+  - Due to these reasons, the ModemManager service was **disabled**.
 
+### multipathd
+  - multipathd is a system daemon that manages multiple paths to the same storage device. It is typically used with enterprise SAN/storage systems.
+  - The server only uses a single disk setup and the presence of multipath devices was checked by running the ***sudo multipath -ll*** which resulted in ***No multipath devices found***.
+  - Due to these reasons, the multipathd service was **disabled**.
+
+### networkd-dispatcher
+  - networkd-dispatcher is a system daemon in Linux that automatically runs scripts in response to network state changes.
+  - Network connections are handled by systemd, so networkd-dispatcher isn't required and hence networkd-disptacher was **disabled**.
+
+### udisks2
+  - It is a headless backend daemon that manages USB devices, external hard drives, and SD cards effortlessly.
+  - Allows for safe Ejecting and Unmounting from the desktop interface and hence left it **enabled**.
 
 
