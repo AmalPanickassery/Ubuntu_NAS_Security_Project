@@ -9,5 +9,8 @@ The hardening process involved the following steps:
 6. Securing Samba
 
 ## Documenting the base system
-The base system was documented by recording the version and kernel of Ubuntu Server that was utilized, services that are running, open ports and the default UFW configuration.
+The base system was documented () by recording the version and kernel of Ubuntu Server that was utilized, services that are running, open ports and the default UFW configuration.
+
+## Updating the system
+
 
