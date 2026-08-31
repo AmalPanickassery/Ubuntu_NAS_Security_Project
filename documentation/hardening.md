@@ -9,8 +9,15 @@ The hardening process involved the following steps:
 6. Securing Samba
 
 ## Documenting the base system
-The base system was documented () by recording the version and kernel of Ubuntu Server that was utilized, services that are running, open ports and the default UFW configuration.
+The base system was documented (security_baseline.md) by recording the version and kernel of Ubuntu Server that was utilized, services that are running, open ports and the default UFW configuration.
 
 ## Updating the system
+- Using the ***sudo apt update*** command, the list of available software packages was updated. These updates were then installed using the ***sudo apt upgrade*** command.
+- The command ***sudo apt autoremove*** was used to remove packages that were automatically installed as dependencies but are no longer required.
+
+## Removal of Unnecessary Packages and Services
+- The ***apt-mark showmanual*** command was run to display all the explicitly installed packages.
+- All of these packages are essential and hence should not be removed.
+- The services whose utility required investigation in <link to security baseline> are mentioned below:
 
 
