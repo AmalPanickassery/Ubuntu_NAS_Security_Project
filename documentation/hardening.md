@@ -73,9 +73,16 @@ The base system was documented in the [security baseline](security_baseline.md) 
   ***sudo ufw allow from <Kali_IP> to any port 22 proto tcp***
 
 
-
 ## Securing Samba
-
+- The UFW controls who can reach Samba. In order to control what that user is allowed to do once they reach Samba, we have to modify ***smb.conf**, which is Samba's configuration file.
+- First, the configuration file was opened using the ***sudo nano /etc/samba/smb.conf*** command.
+- The following edits were made to it:
+  - **guest ok** = no
+  - **valid users** = family
+  - **hide unreadable** = yes
+  - **create mask** = 0660
+  - **directory mask** = 0770
+  - **host allow** = 192.168.1.
 
 
 
