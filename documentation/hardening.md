@@ -46,6 +46,8 @@ The base system was documented in the [security baseline](security_baseline.md) 
 - The server encrypts a **challenge string** using the public key. This string can only be decrypted by the corresponding private key.
 - Once the challenge string is successfully **decrypted**, the connection is **established**.
 - In the off chance that the keys or the machine that contains the keys is apprehended, the **passphrase** comes to the rescue. The passphrase must be entered to decrypt the encrypted private key before it is used on the challenge string.
+- The public key was copied and stored in the newly created ***~/.ssh/authorized_keys*** directory on the Ubuntu server. The permissions for the ***~/.ssh*** was set to **700**. This means that the owner (which is the root) has **rwx** ***(Read, Write, Execute)*** privileges, whereas groups and other users have none.
+- The permissions for ***/authorized_keys*** was set to 600. This means that the owner has **rw** ***(Read, Write)*** privileges, whereas groups, and other users have none.
 
 ## Configuring the UFW
 
