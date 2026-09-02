@@ -39,7 +39,7 @@ The base system was documented in the [security baseline](security_baseline.md) 
   - Allows for safe Ejecting and Unmounting from the desktop interface and hence left it **enabled**.
 
 
-## Improving SSH security
+## SSH setup for Server admin user
 - In order to reduce the risk of stolen credentials when logging into the **amaljp** Linux admin account via the Windows host machine, I created a ssh key pair for the Windows machine using the ***ssh-keygen -t ed25519 -C "amalp@windows"*** command.
 - During the key generation process, I was prompted to provide a passphrase.
 - The ssh key generation produces a public and private key which is far more secure than normal password authentication.
@@ -49,7 +49,11 @@ The base system was documented in the [security baseline](security_baseline.md) 
 - The public key was copied and stored in the newly created ***~/.ssh/authorized_keys*** directory on the Ubuntu server. The permissions for the ***~/.ssh*** was set to **700**. This means that the owner (which is the root) has **rwx** ***(Read, Write, Execute)*** privileges, whereas groups and other users have none.
 - The permissions for ***/authorized_keys*** was set to 600. This means that the owner has **rw** ***(Read, Write)*** privileges, whereas groups, and other users have none.
 
+## Configuring SSH
+- The following modifications were made to the ***/etc/ssh/sshd_config*** after making a copy of it:
+  1. **PermitRootLogin** no
 ## Configuring the UFW
+
 
 ## Securing Samba
 
