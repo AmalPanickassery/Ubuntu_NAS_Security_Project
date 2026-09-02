@@ -83,6 +83,18 @@ The base system was documented in the [security baseline](security_baseline.md) 
   - **create mask** = 0660
   - **directory mask** = 0770
   - **host allow** = 192.168.1.
+ 
+- Here is a brief description of the purpose of each parameter:
+  - **guest ok**: When this is set to ***no***, a user has to pass authentication before accessing the NAS.
+  - **valid users**: Only the users mentioned will be allowed to access the NAS. We have set the value to ***family***, which is the group that has **amaljp**, **alice**, and **bob** as members. Hence, **amaljp**, **alice**, and **bob** will be granted access.
+  - **hide unreadable**: Hides files from users if they don't have permission to read them.
+ 
+  Insert Diagram of example here
+
+  Let's say ***amal_private.txt*** was created by **amaljp** and has the permissions **700**. Since the second and third digits of the permission configuartion is set to **0**, that means that no group or other user can read, write or execute the file. So when **hide unreadable** is set to ***yes***, the file won't be visible to the users **alice** and **bob**. This adds a level of security since user's that don't have any privileges on a file won't even it see it appear on the shared folder on the NAS.
+
+- **create mask**:
+- **directory mask**:
 
 
 
