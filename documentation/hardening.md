@@ -52,7 +52,19 @@ The base system was documented in the [security baseline](security_baseline.md) 
 ## Configuring SSH
 - The following modifications were made to the ***/etc/ssh/sshd_config*** after making a copy of it:
   1. **PermitRootLogin** no
+  2. **PasswordAuthentication** no (might remove this for doc)
+  3. **PubkeyAuthentication** yes
+  4. **KbdInteractiveAuthentication** no
+  5. **X11Forwarding** no
+  6. **MaxAuthTries** 3
+  7. **LoginGraceTime** 30
+  8. **PermitEmptyPasswords** no
+  9. **PermitUserEnvironment** no
+  10. **PrintMotd** no
+  11. **MaxSessions** 2
+ 
 ## Configuring the UFW
+
 
 
 ## Securing Samba
