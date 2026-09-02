@@ -64,6 +64,11 @@ The base system was documented in the [security baseline](security_baseline.md) 
   11. **MaxSessions** 2
  
 ## Configuring the UFW
+- The default incoming policy was set to **deny** if no rule matches. This was done by executing ***sudo ufw default deny incoming***.
+- The default outgoing policy was set to **allow** if no rule matches. This was done by executing ***sudo ufw default allow outgoing***. Blocking all outgoing traffic would make basic administration difficult.
+- Two rules were configured which allowed for tcp traffic from the **Windows Host** machine and the **Kali VM**:
+  ***sudo ufw allow from <Windows_IP> to any port 22 proto tcp***
+  ***sudo ufw allow from <Kali_IP> to any port 22 proto tcp***
 
 
 
