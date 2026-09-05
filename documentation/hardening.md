@@ -93,8 +93,9 @@ The base system was documented in the [security baseline](security_baseline.md) 
 
   Let's say ***amal_private.txt*** was created by **amaljp** and has the permissions **700**. Since the second and third digits of the permission configuartion is set to **0**, that means that no group or other user can read, write or execute the file. So when **hide unreadable** is set to ***yes***, the file won't be visible to the users **alice** and **bob**. This adds a level of security since user's that don't have any privileges on a file won't even it see it appear on the shared folder on the NAS.
 
-- **create mask**:
-- **directory mask**:
+- **create mask**: When it is set to ***0660***, all newly created files will automatically have the ***0660*** permissions configuration. For example, if you create a new file named ***new_file.txt*** it's permissions will be set to **0660**. **0660** implies that the **owner** and permitted **group** can ***Read*** and ***Write***, but all other users can no permissions.
+- **directory mask**: When it is set to ***0770***, all newly created directories will automatically have the ***0770*** permissions configuration. For example, if you create a new directory named ***new_dir*** it's permissions will be set to **0770**. **0770** implies that the **owner** and permitted **group** can ***Read***, ***Write***, and ***Execute***, but all other users have no permissions.
+- **host allow**: When it is set to ***192.168.1.***, only clients whose IP address begins with **192.168.1.** can connect to this Samba service. This adds an extra level of security since only devices on the LAN can connect and access the shares.
 
 
 
