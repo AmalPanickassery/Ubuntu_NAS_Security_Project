@@ -11,18 +11,39 @@ The following items were tested:
 7. User home directories access
 
 ## Shared directory permissions
-- The permissions of the shared NAS directory that had been created to store the files that uploaded to the NAS was checked by executing the following command:
+- The permissions of the shared NAS directory that had been created to store the files that uploaded to the NAS was checked by executing:
   
   ***ls -ld /srv/nas/shared***
   
   <img width="727" height="87" alt="Screenshot 2026-09-05 123145" src="https://github.com/user-attachments/assets/68234d51-f9d1-459e-afd3-4e8d5424eed9" />
 
 ## Shared files permissions
-- The permissions of the files present on the shared NAS directory was checked by executing the following command:
+- The permissions of the files present on the shared NAS directory was checked by executing:
 
   ***ls -l /srv/nas/shared***
 
   <img width="776" height="191" alt="Screenshot 2026-09-05 123518" src="https://github.com/user-attachments/assets/19812a19-7528-4b24-9ce7-167c2cf09308" />
+
+## Samba configuration
+- The permissions of the Samba configuration file was checked by executing:
+
+  ***ls -l /etc/samba/smb.conf***
+
+## SSH configuration
+- The permissions of the SSH configuration file was checked by executing:
+
+  ***ls -l /etc/ssh/sshd_config***
+
+## SSH keys
+- The permissions of the hidden ssh directory was checked by executing:
+
+  ***ls -l ~/.ssh***
+
+## User home directories
+- The permissions of the user home directories was checked by executing:
+
+  ***ls -ld /home/****
+
 
   
 
