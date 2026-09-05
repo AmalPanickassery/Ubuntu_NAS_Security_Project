@@ -15,7 +15,18 @@ The following items were tested:
   
   ***ls -ld /srv/nas/shared***
   
-  <img width="772" height="133" alt="Screenshot 2026-09-05 122842" src="https://github.com/user-attachments/assets/85a4d9d3-f5c2-49be-af87-2c70c6c48f73" />
+<img width="727" height="87" alt="Screenshot 2026-09-05 123145" src="https://github.com/user-attachments/assets/68234d51-f9d1-459e-afd3-4e8d5424eed9" />
+
+## Shared files permissions
+- The permissions of the files present on the shared NAS directory was checked by executing the following command:
+
+  ***ls -l /srv/nas/shared***
+
+  <img width="776" height="191" alt="Screenshot 2026-09-05 123518" src="https://github.com/user-attachments/assets/19812a19-7528-4b24-9ce7-167c2cf09308" />
+
+  
+
+
 
   
 
