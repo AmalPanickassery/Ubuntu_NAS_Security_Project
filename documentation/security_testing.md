@@ -14,6 +14,7 @@ The following items were tested:
 - The permissions of the shared NAS directory that had been created to store the files that uploaded to the NAS was checked by executing the following command:
   
   ***ls -ld /srv/nas/shared***
+  
   <img width="772" height="133" alt="Screenshot 2026-09-05 122842" src="https://github.com/user-attachments/assets/85a4d9d3-f5c2-49be-af87-2c70c6c48f73" />
 
   
