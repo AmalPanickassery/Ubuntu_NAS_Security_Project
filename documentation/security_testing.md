@@ -4,11 +4,10 @@ This section elaborates on the security testing/verification that was performed 
 The following items were tested:
 1. Shared directory permissions
 2. Shared files permissions
-3. Parent directories permissions
-4. Samba configuration
-5. SSH configuration
-6. SSH keys permissions
-7. User home directories access
+3. Samba configuration
+4. SSH configuration
+5. SSH keys permissions
+6. User home directories access
 
 ## Shared directory permissions
 - The permissions of the shared NAS directory that had been created to store the files that uploaded to the NAS was checked by executing:
