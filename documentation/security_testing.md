@@ -26,7 +26,7 @@ The following items were tested:
 
   <img width="776" height="191" alt="Screenshot 2026-09-05 123518" src="https://github.com/user-attachments/assets/19812a19-7528-4b24-9ce7-167c2cf09308" />
 
-  - Everything is as expected. The **owner** and permitted **group** have ***rw** access to the files and ***rwx*** and ***rws*** access to the directories on the NAS. 
+- Everything is as expected. The **owner** and permitted **group** have ***rw** access to the files and ***rwx*** and ***rws*** access to the directories on the NAS. 
 
 ## Samba configuration
 - The permissions of the Samba configuration file was checked by executing:
