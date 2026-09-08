@@ -1,4 +1,4 @@
-# Attack 1 (Network Reconnaissance)
+# Attack 1 (Phase 1): Network Reconnaissance 
 The following steps elaborate the Attack 1 process:
 
 ## Step 1: Determine that the Kali VM can reach the NAS
@@ -21,4 +21,14 @@ The following steps elaborate the Attack 1 process:
   ***nmap 192.168.1.xx***
 
 - ***Screenshot***
+
+- Now we need to check the services that are running along with their version using the following command:
+
+  ***nmap -sV***
+
+  ***nmap -sC***
+
+- ***Screenshot***
+
+- From the result it is clear that Samba seems to be the one possible entry point since it is the major service running on the server.
 
