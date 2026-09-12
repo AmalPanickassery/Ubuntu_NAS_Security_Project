@@ -19,3 +19,8 @@ Since the major service that's running on the NAS is Samba, it is the most relev
 
 - ***Screenshot***
 - The ***NT_STATUS_ACCESS_DENIED*** indicates that the **guest ok = no** parameter in the Samba configuration file (i.e. smb.conf) is working as intended. The **guest ok = no** ensures that users must authenticate before accessing the share. 
+
+## Findings from this Attack
+- Attacker was able to enumerate share names without credentials, but could not access the protected shares.
+- **Severity:** Low
+- **Remediation goal:** Prevent unauthenticated share enumeration.
