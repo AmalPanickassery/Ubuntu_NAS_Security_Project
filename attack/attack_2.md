@@ -20,3 +20,8 @@
 
 - As you can see, the user is prompted to enter the **amaljp** account's password. Hence, the SSH keys aren't being utilized for authentication as we have intended in order to increase the security on the admin account.
 - This must be remediated as it undermines the security measures we established in order increase admin security.
+
+## Findings
+- The attacker was able to use the stolen credentials to login to the **amaljp** admin account and bypass the SSH.
+- **Severity**: Medium
+- **Remediation goal**: 
