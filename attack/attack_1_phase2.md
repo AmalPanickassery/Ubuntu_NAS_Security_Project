@@ -12,4 +12,10 @@ Since the major service that's running on the NAS is Samba, it is the most relev
 - It is clear from the output that the Kali VM was able to enumerate the shares without providing a password.
 - Even though the Kali VM's IP address is trusted in the server's UFW rules, it should only be allowed to attempt to connect but it shouldn't be permitted to enumerate the Samba shares without authentication.
 
-## Step 2: Attempt login
+## Step 2: Unauthenticated Samba share access
+- In this step, I checked whether the shares are accessible without providing credentials. To do this, the following command was executed:
+
+  ***smbclient //192.168.1.xx -N***
+
+- ***Screenshot***
+- The ***NT_STATUS_ACCESS_DENIED*** indicates that the **guest ok = no** parameter in the Samba configuration file (i.e. smb.conf) is working as intended. The **guest ok = no** ensures that users must authenticate before accessing the share. 
