@@ -24,4 +24,4 @@
 ## Findings
 - The attacker was able to use the stolen credentials to login to the **amaljp** admin account and bypass the SSH.
 - **Severity**: Medium
-- **Remediation goal**: 
+- **Remediation goal**: Require the **amaljp** account to only be accessible via SSH keys
