@@ -4,14 +4,16 @@
 
   ***sudo nano /etc/ssh/sshd_config***
 
-<img width="497" height="117" alt="image" src="https://github.com/user-attachments/assets/f4097415-e116-4d05-8d5d-e310e0e655f0" />
+<img width="769" height="77" alt="remediation2_scsht_1" src="https://github.com/user-attachments/assets/07779fb8-2f6f-4401-899c-fff0ac97ed43" />
+
 
 
 - As is clearly stated in the configuration file, ***PasswordAuthentication*** is set to ***yes***. Hence, globally the SSH policy for user authentication is that **PasswordAuthentication** is a possible option.
 - Because of this, the Ubuntu password associated with the **amaljp** admin account can be used to gain access it.
 - In order to remediate this security risk, a specific rule must be established for **amaljp**. At the bottom of the **sshd_config** after the Subsystem and global settings, the following is added:
 
-- ***Screenshot***
+<img width="645" height="337" alt="remediation2_scsht_2" src="https://github.com/user-attachments/assets/71173605-d7bc-479e-ae09-cf3c860e627b" />
+
 - To test whether the specific authentication settings we established for **amaljp** the following command is executed:
 
   ***COMMAND***
