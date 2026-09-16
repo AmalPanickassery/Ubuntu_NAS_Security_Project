@@ -27,11 +27,10 @@ The following steps elaborate the Attack 1 process:
 
 - Now we need to check the services that are running along with their version using the following command:
 
-  ***nmap -sV***
+***nmap -sC -sV 192.168.1.xx***
 
-  ***nmap -sC***
+<img width="782" height="205" alt="nmapsCsV" src="https://github.com/user-attachments/assets/8ef50d72-1d17-49d0-a715-c27bc6bb24b2" />
 
-- ***Screenshot***
 
 - From the result it is clear that Samba seems to be the one possible entry point since it is the major service running on the server.
 
