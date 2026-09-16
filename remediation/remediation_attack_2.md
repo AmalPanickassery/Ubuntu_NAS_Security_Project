@@ -19,11 +19,18 @@
   ***ssh amaljp@192.168.1.xx***
 
 
-  - Now to ensure that the **alice** and **bob** user accounts utilize the globally defined authentication settings the following commands are executed:
+<img width="437" height="60" alt="remediation2_scsht_3" src="https://github.com/user-attachments/assets/05d34d31-c83a-4cec-a48f-f42b425faf49" />
+
+
+- Now to ensure that the **alice** and **bob** user accounts utilize the globally defined authentication settings the following commands are executed:
  
-    ***COMMAND FOR ALICE***
-    - ***Screenshot***
-    ***COMMAND FOR BOB***
+***ssh alice@192.168.1.xx***
+
+
+
+ 
+      
+***ssh bob@192.168.1.xx***
     - ***SCreenshot***
    
     - It is clear that **amaljp** has the SSH only authentication set up and the **alice** and **bob** accounts follow the globally enforced authentication policy.
