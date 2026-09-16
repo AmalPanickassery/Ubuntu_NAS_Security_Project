@@ -4,7 +4,8 @@
 
   ***sudo nano /etc/ssh/sshd_config***
 
-- ***Screenshot***
+<img width="497" height="117" alt="image" src="https://github.com/user-attachments/assets/f4097415-e116-4d05-8d5d-e310e0e655f0" />
+
 
 - As is clearly stated in the configuration file, ***PasswordAuthentication*** is set to ***yes***. Hence, globally the SSH policy for user authentication is that **PasswordAuthentication** is a possible option.
 - Because of this, the Ubuntu password associated with the **amaljp** admin account can be used to gain access it.
