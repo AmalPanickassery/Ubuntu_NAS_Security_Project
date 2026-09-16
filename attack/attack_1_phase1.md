@@ -11,7 +11,9 @@ The following steps elaborate the Attack 1 process:
   ***ping -c 4 192.168.1.xx***
 
 - The **-c** stands for count and it is a flag that tells the **ping** utility to stop after sending a specific number of packets (in this scenario that number is **4**) to the IP address 192.168.1.xx.
-- ***Screenshot***
+
+<img width="515" height="177" alt="ping_kali" src="https://github.com/user-attachments/assets/71db04b7-0a9f-4ac7-991b-fcec64d68387" />
+
 - All the packets that were transmitted were received. Hence, the **Kali VM** can reach the **NAS**.
 
 ## Step 3: Check the open ports and services
@@ -20,7 +22,8 @@ The following steps elaborate the Attack 1 process:
 
   ***nmap 192.168.1.xx***
 
-- ***Screenshot***
+<img width="531" height="217" alt="nmap" src="https://github.com/user-attachments/assets/a783ae4b-3ac8-4f7e-b7a8-9857f3c8b3d6" />
+
 
 - Now we need to check the services that are running along with their version using the following command:
 
