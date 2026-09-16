@@ -27,10 +27,13 @@
 ***ssh alice@192.168.1.xx***
 
 
+<img width="551" height="77" alt="remediation2_scsht_4" src="https://github.com/user-attachments/assets/05b60f79-5301-45ee-8313-555633351c90" />
 
- 
-      
+
 ***ssh bob@192.168.1.xx***
-    - ***SCreenshot***
-   
-    - It is clear that **amaljp** has the SSH only authentication set up and the **alice** and **bob** accounts follow the globally enforced authentication policy.
+
+
+<img width="527" height="76" alt="remediation2_scsht_5" src="https://github.com/user-attachments/assets/43a5db68-61a9-4f74-85a2-e16739c1cb2d" />
+
+
+- It is clear that **amaljp** has the SSH only authentication set up and the **alice** and **bob** accounts follow the globally enforced authentication policy.
