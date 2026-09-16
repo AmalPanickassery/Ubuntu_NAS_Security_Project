@@ -14,9 +14,10 @@
 
 <img width="645" height="337" alt="remediation2_scsht_2" src="https://github.com/user-attachments/assets/71173605-d7bc-479e-ae09-cf3c860e627b" />
 
-- To test whether the specific authentication settings we established for **amaljp** the following command is executed:
+- To test whether the specific authentication settings we established for **amaljp** the following command is executed in the Kail Terminal:
 
-  ***COMMAND***
+  ***ssh amaljp@192.168.1.xx***
+
 
   - Now to ensure that the **alice** and **bob** user accounts utilize the globally defined authentication settings the following commands are executed:
  
