@@ -9,14 +9,16 @@
 - **-p 22**: Scans only TCP port 22, which is the standard SSH port.
 - **-sV**: Used to identify the service and it's version that's running on the port.
 
-- ***Screenshot***
+<img width="765" height="197" alt="Kali_can_reach_SSH" src="https://github.com/user-attachments/assets/8f912c21-1ac6-4e95-99e2-bee907b2ad46" />
+
 
 - After this I attempted to login to the **amaljp** account via the Kali VM by using the stolen credentials. The purpose of setting up the SSH keys for the Windows host machine was to ensure that the user can only login to the **amaljp** account using the SSH key on the Windows machine. A passphrase was also implemented in case the SSH were compromised (which is unlikely but the risk is never 0).
 - I used the following command in Kali to attempt to SSH into the Ubuntu server:
 
   ***ssh amaljp@192.168.1.xx***
 
-- ***Screenshot***
+<img width="527" height="521" alt="amaljp_password_login" src="https://github.com/user-attachments/assets/32655bd7-2a11-4a3d-befd-cf088a7e8828" />
+
 
 - As you can see, the user is prompted to enter the **amaljp** account's password. Hence, the SSH keys aren't being utilized for authentication as we have intended in order to increase the security on the admin account.
 - This must be remediated as it undermines the security measures we established in order increase admin security.
