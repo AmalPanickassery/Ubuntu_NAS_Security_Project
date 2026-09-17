@@ -19,7 +19,8 @@
 
   ***ssh amaljp@192.168.1.xx***
 
-<img width="527" height="521" alt="amaljp_password_login" src="https://github.com/user-attachments/assets/32655bd7-2a11-4a3d-befd-cf088a7e8828" />
+<img width="521" height="517" alt="amaljp_password_login2" src="https://github.com/user-attachments/assets/6faf74a0-9357-4db4-9197-7a3adcab2919" />
+
 
 
 - As you can see, the user is prompted to enter the **amaljp** account's password. Hence, the SSH keys aren't being utilized for authentication as we have intended in order to increase the security on the admin account.
