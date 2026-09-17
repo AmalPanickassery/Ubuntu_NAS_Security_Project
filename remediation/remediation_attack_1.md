@@ -7,6 +7,9 @@
 
   ***access based share enum = yes***
 
+  <img width="447" height="335" alt="remediation1_scsht_1" src="https://github.com/user-attachments/assets/d54a995b-8aa2-4f19-a6d0-8bd8fc3996f9" />
+
+
 - This parameter tells Samba to hide the share during enumeration when the connecting user isn't authorized to access it.
 - Now to test whether the change has created the desired effect, the following command is executed:
 
