@@ -39,4 +39,4 @@
 <img width="527" height="76" alt="remediation2_scsht_5" src="https://github.com/user-attachments/assets/43a5db68-61a9-4f74-85a2-e16739c1cb2d" />
 
 
-- It is clear that **amaljp** has the **SSH key only** authentication set up and the **alice** and **bob** accounts follow the globally enforced **password authentication** policy.
+- It is clear that now the **amaljp** has the **SSH key only** authentication set up and the **alice** and **bob** accounts follow the globally enforced **password authentication** policy. Hence the security risk has been remediated.
