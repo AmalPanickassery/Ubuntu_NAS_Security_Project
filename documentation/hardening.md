@@ -49,10 +49,10 @@ The base system was documented in the [security baseline](security_baseline.md) 
 
 
 ## SSH setup for Server admin user
-- In order to reduce the risk of stolen credentials when logging into the **amaljp** Linux admin account via the Windows host machine, I created a ssh key pair for the Windows machine using the ***ssh-keygen -t ed25519 -C "amalp@windows"*** command.
+- In order to reduce the risk of an attacker logging into the **amaljp** admin account with stolen credentials, I created a ssh key pair for the Windows machine using the ***ssh-keygen -t ed25519 -C "amalp@windows"*** command.
 - During the key generation process, I was prompted to provide a passphrase.
 - The ssh key generation produces a public and private key which is far more secure than normal password authentication.
-- The server encrypts a **challenge string** using the public key. This string can only be decrypted by the corresponding private key.
+- The Ubuntu server encrypts a **challenge string** using the Windows machine's public key. This string can only be decrypted by the corresponding private key.
 - Once the challenge string is successfully **decrypted**, the connection is **established**.
 - In the off chance that the keys or the machine that contains the keys is apprehended, the **passphrase** comes to the rescue. The passphrase must be entered to decrypt the encrypted private key before it is used on the challenge string.
 - The public key was copied and stored in the newly created ***~/.ssh/authorized_keys*** directory on the Ubuntu server. The permissions for the ***~/.ssh*** was set to **700**. This means that the owner (which is the root) has **rwx** ***(Read, Write, Execute)*** privileges, whereas groups and other users have none.
