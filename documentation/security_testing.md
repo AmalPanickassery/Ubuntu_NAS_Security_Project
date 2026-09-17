@@ -54,8 +54,7 @@ The following items were tested:
 
   <img width="713" height="70" alt="Screenshot 2026-09-05 160808" src="https://github.com/user-attachments/assets/dd568746-3487-4338-8add-5e6add8e129f" />
 
-- As expected only **amaljp** has **rw** access the ssh keys stored on the server. Every other user and group has no access. This helps reduce the chance of viewing or editing the keys by random users that aren't admins.
-
+- As expected only **amaljp** has **rw** access to the ssh keys stored on the server. Every other user and group has no access. This helps reduce the chance of random users that are admins from editing and viewing the keys.
 
 ## User home directories
 - The permissions of the user home directories was checked by executing:
@@ -64,7 +63,7 @@ The following items were tested:
 
   <img width="701" height="95" alt="Screenshot 2026-09-05 160856" src="https://github.com/user-attachments/assets/9df5ccd9-88ba-4914-a857-cca9535fbe78" />
 
-- As expected, the users have full access (i.e. ***rwx***) to their corresponding user home directory. This ensures other users can't view to edit another user's permissions etc.
+- As expected, the users have full access (i.e. ***rwx***) to their corresponding user home directory. This ensures other users can't view or edit another user's permissions etc.
 
 
 
