@@ -60,17 +60,16 @@ The base system was documented in the [security baseline](security_baseline.md) 
 
 ## Configuring SSH
 - The following modifications were made to the ***/etc/ssh/sshd_config*** after making a copy of it:
-  1. **PermitRootLogin** no
-  2. **PasswordAuthentication** no (might remove this for doc)
-  3. **PubkeyAuthentication** yes
-  4. **KbdInteractiveAuthentication** no
-  5. **X11Forwarding** no
-  6. **MaxAuthTries** 3
-  7. **LoginGraceTime** 30
-  8. **PermitEmptyPasswords** no
-  9. **PermitUserEnvironment** no
-  10. **PrintMotd** no
-  11. **MaxSessions** 2
+  1. **PermitRootLogin** no: Prevents the root account from logging in directly through SSH. This way an attacker can't directly target a highly privileged root account. They have to first compromise a regular account and then obtain elevated privileges to access it. Adds an additional security barrier.
+  2. **PasswordAuthentication** yes: Allows for password authentication (required for the standard user accounts i.e. **alice** and **bob**)
+  3. **PubkeyAuthentication** yes: Enables authentication using SSH public/private key pairs (required for authenticating the **amaljp** admin account)
+  5. **X11Forwarding** no: Prevents the SSH sessions from forwarding X11 graphical applications through the connection. This feature of the SSH isn't required since the NAS is running headless. Reduces the number of SSH features available for misuse.
+  6. **MaxAuthTries** 3: It limits each SSH connection to three failed authentication attempts. This prevents **brute force** attacks. 
+  7. **LoginGraceTime** 30: Gives the client 30 seconds to successfully authenticate before SSH terminates the connection. This limits how long unauthenticated connections can remain open. This helps prevent attackers from repeatedly opening SSH connections in order to consume server resources.
+  8. **PermitEmptyPasswords** no: Ensures that an account can't be accessed through SSH simply because it has no password configured. It provides a safeguard against insecure account configurations.
+  9. **PermitUserEnvironment** no: Prevents users from supplying environment variables through SSH user-environment files. This helps reduce the ability for users to influence the environment of their SSH sessions.
+  10. **PrintMotd** no: Prevents SSH from displaying the system's **Message of the Day** after login. The **MOTD** might contain system details and network information and displaying this to every SSH user could provide attackers with information that would aid them in an attack.
+  11. **MaxSessions** 2: Limits each SSH connection to a maximum of two concurrent sessions. Just like **LoginGraceTime** it helps prevent excessive resource usage.
  
 ## Configuring the UFW
 - The default incoming policy was set to **deny** if no rule matches. This was done by executing ***sudo ufw default deny incoming***.
