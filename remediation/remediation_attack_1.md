@@ -11,6 +11,9 @@
 
 
 - This parameter tells Samba to hide the share during enumeration when the connecting user isn't authorized to access it.
+
+## Security Retest
+  
 - Now to test whether the change has created the desired effect, the following command is executed:
 
   ***smbclient -L //192.168.1.xx -N***
