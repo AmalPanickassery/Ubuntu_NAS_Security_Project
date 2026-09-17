@@ -59,7 +59,7 @@ The base system was documented in the [security baseline](security_baseline.md) 
 - The permissions for ***/authorized_keys*** was set to 600. This means that the owner has **rw** ***(Read, Write)*** privileges, whereas groups, and other users have none.
 
 ## Configuring SSH
-- The following modifications were made to the ***/etc/ssh/sshd_config*** after making a copy of it:
+The following modifications were made to the ***/etc/ssh/sshd_config*** after making a copy of it:
   1. **PermitRootLogin** no:
   - Prevents the root account from logging in directly through SSH.
   - This way an attacker can't directly target a highly privileged root account. They have to first compromise a regular account and then obtain elevated privileges to access it.
