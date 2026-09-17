@@ -10,8 +10,8 @@ Since the major service that's running on the NAS is Samba, it is the most relev
 <img width="762" height="232" alt="smb_enum_1" src="https://github.com/user-attachments/assets/182357df-a597-4dcc-a962-ffaab9469f31" />
 
 
-- It is clear from the output that the Kali VM was able to enumerate the shares without providing a password.
-- Even though the Kali VM's IP address is trusted in the server's UFW rules, it should only be allowed to attempt to connect but it shouldn't be permitted to enumerate the Samba shares without authentication.
+- It is clear from the output that the Kali VM was able to **enumerate** the shares without providing a **password**.
+- Even though the Kali VM's IP address is **trusted** in the server's UFW rules, it should only be allowed to attempt to connect but it **shouldn't** be permitted to enumerate the Samba shares without authentication.
 
 ## Step 2: Unauthenticated Samba share access
 - In this step, I checked whether the shares are accessible without providing credentials. To do this, the following command was executed:
