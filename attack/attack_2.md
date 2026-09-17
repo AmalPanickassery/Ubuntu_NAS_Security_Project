@@ -12,7 +12,9 @@
 <img width="765" height="197" alt="Kali_can_reach_SSH" src="https://github.com/user-attachments/assets/8f912c21-1ac6-4e95-99e2-bee907b2ad46" />
 
 
-- After this I attempted to login to the **amaljp** account via the Kali VM by using the stolen credentials. The purpose of setting up the SSH keys for the Windows host machine was to ensure that the user can only login to the **amaljp** account using the SSH key on the Windows machine. A passphrase was also implemented in case the SSH were compromised (which is unlikely but the risk is never 0).
+- After this I attempted to login to the **amaljp** account via the Kali VM by using the stolen credentials.
+- The purpose of setting up the SSH keys for the Windows host machine was to ensure that the user can only login to the **amaljp** account using the SSH key on the Windows machine.
+- A passphrase was also implemented in case the SSH were compromised (which is unlikely but the risk is never 0).
 - I used the following command in Kali to attempt to SSH into the Ubuntu server:
 
   ***ssh amaljp@192.168.1.xx***
