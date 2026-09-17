@@ -17,6 +17,8 @@
 <img width="645" height="337" alt="remediation2_scsht_2" src="https://github.com/user-attachments/assets/71173605-d7bc-479e-ae09-cf3c860e627b" />
 
 
+## Security Retest
+
 - To test whether the specific authentication settings we established for **amaljp** the following command is executed in the Kail Terminal:
 
   ***ssh amaljp@192.168.1.xx***
