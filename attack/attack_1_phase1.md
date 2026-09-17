@@ -1,5 +1,5 @@
 # Attack 1 (Phase 1): Network Reconnaissance 
-The following steps elaborate the Attack 1 process:
+The following steps elaborate the Attack 1 (Phase 1) process:
 
 ## Step 1: Test the connectivity between Kali VM and the NAS
 - In order to test whether the Kali VM can connect to the NAS, I executed the following command:
