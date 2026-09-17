@@ -14,6 +14,9 @@
 - Now to test whether the change has created the desired effect, the following command is executed:
 
   ***smbclient -L //192.168.1.xx -N***
+  
 
-- ***Screenshot***
+<img width="642" height="161" alt="image" src="https://github.com/user-attachments/assets/840bb57b-87f0-44a8-8337-0d3a6499a934" />
+
+ 
 - It is clear that the share is no longer visible without providing credentials. To test whether 
