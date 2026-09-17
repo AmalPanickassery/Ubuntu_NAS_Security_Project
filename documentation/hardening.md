@@ -31,7 +31,12 @@ The base system was documented in the [security baseline](security_baseline.md) 
 
 ### multipathd
   - multipathd is a system daemon that manages multiple paths to the same storage device. It is typically used with enterprise SAN/storage systems.
-  - The server only uses a single disk setup and the presence of multipath devices was checked by running the ***sudo multipath -ll*** which resulted in ***No multipath devices found***.
+  - The Ubuntu server only uses a single disk setup and the presence of multipath devices was checked by running the ***sudo multipath -ll*** which resulted in no output being printed (which implies that no multipath storage devices were detected)
+
+
+  <img width="492" height="55" alt="image" src="https://github.com/user-attachments/assets/e2f20fae-90a4-4cda-bf94-d4cb7906d8e8" />
+
+    
   - Due to these reasons, the multipathd service was **disabled**.
 
 ### networkd-dispatcher
