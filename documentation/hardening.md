@@ -87,11 +87,11 @@ The following modifications were made to the ***/etc/ssh/sshd_config*** after ma
 
   - Gives the client 30 seconds to successfully authenticate before SSH terminates the connection.
   - This limits how long unauthenticated connections can remain open.
-  - This helps prevent attackers from repeatedly opening SSH connections in order to consume server resources.
+  - This helps prevent attackers from leaving SSH connections open in order to consume server resources.
   
   8. **PermitEmptyPasswords** no:
 
-  - Ensures that an account can't be accessed through SSH simply because it has no password configured.
+  - Ensures that an account can't be accessed through SSH without providing a password simply because it has no password configured.
   - It provides a safeguard against insecure account configurations.
   
   9. **PermitUserEnvironment** no:
