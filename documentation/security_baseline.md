@@ -12,9 +12,9 @@ The following is a list of all the services on the server:
 - **cron**: Responsible for scheduled/background tasks ***(Essential)***
 - **dbus**: Allows system applications/services to communicate with eachother ***(Essential)***
 - **getty@tty1**: Provides the local text login console ***(Essential)***
-- **ModemManager**: Manages cellular/mobile broadband modems ***(Use Requires Investigation)***
-- **multipathd**: Manages multiple paths to the same storage device ***(Use Requires Investigation)***
-- **networkd-dispatcher**: Runs scripts in response to network state changes ***(Use Requires Investigation)***
+- **ModemManager**: Manages cellular/mobile broadband modems ***(Necessity Requires Investigation)***
+- **multipathd**: Manages multiple paths to the same storage device ***(Necessity Requires Investigation)***
+- **networkd-dispatcher**: Runs scripts in response to network state changes ***(Necessity Requires Investigation)***
 - **polkit**: Controls authorization for certain privileged operations ***(Essential)***
 - **rsyslog**: System logging ***(Essential)***
 - **smbd**: Samba file-sharing server ***(Essential)***
@@ -22,31 +22,10 @@ The following is a list of all the services on the server:
 - **systemd-journald**: Collects system logs ***(Essential)***
 - **systemd-resolved**: Responsible for DNS resolution ***(Essential)***
 - **systemd-udevd**: Detects/manages hardware devices ***(Essential)***
-- **udisks2**: Manages storage devices/disks ***(Use Requires Investigation)***
+- **udisks2**: Manages storage devices/disks ***(Necessity Requires Investigation)***
 - **unattended-upgrades**: Handles automatic package updates ***(Essential)***
 - **user@1000**: User manager for UID 1000 ***(Essential)***
 
-# Service Requirement Investigation Results
-The following are the findings and conclusions drawn from the investigation into whether certain services are actually essential or not. Disabling non-essential services ensures that vulnerabilities aren't introduced due to the presence of non-essential services on the system.
-
-## ModemManager
-- ModemManager is a system daemon in Linux that controls mobile broadband devices. It provides a unified way to configure and manage cellular modems.
-- The network connection for the NAS is provided by the **VirtualBox** virtual Ethernet adapter. Therefore, ModemManager is **not required**.
-- The presence of a cellular modem was also checked by running the ***mmcli -L*** command which resulted in ***No modems were found***.
-- Due to these reasons, the ModemManager service was **disabled**.
-
-## multipathd
-- multipathd is a system daemon that manages multiple paths to the same storage device. It is typically used with enterprise SAN/storage systems.
-- The server only uses a single disk setup and the presence of multipath devices was checked by running the ***sudo multipath -ll*** which resulted in ***No multipath devices found***.
-- Due to these reasons, the multipathd service was **disabled**.
-
-## networkd-dispatcher
-- networkd-dispatcher is a system daemon in Linux that automatically runs scripts in response to network state changes.
-- Network connections are handled by systemd, so networkd-dispatcher isn't required and hence networkd-disptacher was **disabled**.
-
-## udisks2
-- It is a headless backend daemon that manages USB devices, external hard drives, and SD cards effortlessly.
-- Allows for safe Ejecting and Unmounting from the desktop interface and hence left it **enabled**.
 
 # Open Ports
 The following is a list of all the open ports and their use cases:
