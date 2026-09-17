@@ -23,6 +23,10 @@ The base system was documented in the [security baseline](security_baseline.md) 
   - ModemManager is a system daemon in Linux that controls mobile broadband devices. It provides a unified way to configure and manage cellular modems.
   - The network connection for the NAS is provided by the **VirtualBox** virtual Ethernet adapter. Therefore, ModemManager is **not required**.
   - The presence of a cellular modem was also checked by running the ***mmcli -L*** command which resulted in ***No modems were found***.
+
+  <img width="375" height="78" alt="image" src="https://github.com/user-attachments/assets/c17fb58f-0239-48a7-abfe-9e6cd40191a5" />
+
+  
   - Due to these reasons, the ModemManager service was **disabled**.
 
 ### multipathd
