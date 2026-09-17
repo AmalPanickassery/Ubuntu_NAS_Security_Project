@@ -25,4 +25,4 @@ Since the major service that's running on the NAS is Samba, it is the most relev
 ## Findings from this Attack
 - Attacker was able to enumerate share names without credentials, but could not access the protected shares.
 - **Severity:** Low
-- **Remediation goal:** Prevent unauthenticated share enumeration.
+- **Remediation goal:** Prevent unauthenticated share enumeration. [Remediation for Attack 1](remediation_attack_1.md)
