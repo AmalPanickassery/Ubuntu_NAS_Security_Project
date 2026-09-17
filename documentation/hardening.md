@@ -68,45 +68,45 @@ The following modifications were made to the ***/etc/ssh/sshd_config*** after ma
   
   3. **PasswordAuthentication** yes:
 
-    - Allows for password authentication (required for the standard user accounts i.e. **alice** and **bob**)
+  - Allows for password authentication (required for the standard user accounts i.e. **alice** and **bob**)
   
   4. **PubkeyAuthentication** yes:
 
-    - Enables authentication using SSH public/private key pairs (required for authenticating the **amaljp** admin account)
+  - Enables authentication using SSH public/private key pairs (required for authenticating the **amaljp** admin account)
   
   5. **X11Forwarding** no:
 
-    - Prevents the SSH sessions from forwarding X11 graphical applications through the connection. This feature of the SSH isn't required since the NAS is running headless.
-    - Reduces the number of SSH features available for misuse.
+  - Prevents the SSH sessions from forwarding X11 graphical applications through the connection. This feature of the SSH isn't required since the NAS is running headless.
+  - Reduces the number of SSH features available for misuse.
   
   6. **MaxAuthTries** 3:
 
-    - It limits each SSH connection to three failed authentication attempts. This prevents **brute force** attacks.
+  - It limits each SSH connection to three failed authentication attempts. This prevents **brute force** attacks.
   
   7. **LoginGraceTime** 30:
 
-    - Gives the client 30 seconds to successfully authenticate before SSH terminates the connection.
-    -  This limits how long unauthenticated connections can remain open.
-    -  This helps prevent attackers from repeatedly opening SSH connections in order to consume server resources.
+  - Gives the client 30 seconds to successfully authenticate before SSH terminates the connection.
+  - This limits how long unauthenticated connections can remain open.
+  - This helps prevent attackers from repeatedly opening SSH connections in order to consume server resources.
   
   8. **PermitEmptyPasswords** no:
 
-    - Ensures that an account can't be accessed through SSH simply because it has no password configured.
-    - It provides a safeguard against insecure account configurations.
+  - Ensures that an account can't be accessed through SSH simply because it has no password configured.
+  - It provides a safeguard against insecure account configurations.
   
   9. **PermitUserEnvironment** no:
 
-    - Prevents users from supplying environment variables through SSH user-environment files.
-    - This helps reduce the ability for users to influence the environment of their SSH sessions.
+  - Prevents users from supplying environment variables through SSH user-environment files.
+  - This helps reduce the ability for users to influence the environment of their SSH sessions.
     
   10. **PrintMotd** no:
 
-    - Prevents SSH from displaying the system's **Message of the Day** after login.
-    - The **MOTD** might contain system details and network information and displaying this to every SSH user could provide attackers with information that would aid them in an attack.
+  - Prevents SSH from displaying the system's **Message of the Day** after login.
+  - The **MOTD** might contain system details and network information and displaying this to every SSH user could provide attackers with information that would aid them in an attack.
     
   10. **MaxSessions** 2:
 
-    - Limits each SSH connection to a maximum of two concurrent sessions. Just like **LoginGraceTime** it helps prevent excessive resource usage.
+  - Limits each SSH connection to a maximum of two concurrent sessions. Just like **LoginGraceTime** it helps prevent excessive resource usage.
  
 ## Configuring the UFW
 - The default incoming policy was set to **deny** if no rule matches. This was done by executing ***sudo ufw default deny incoming***.
