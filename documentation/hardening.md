@@ -62,7 +62,7 @@ The base system was documented in the [security baseline](security_baseline.md) 
 The following modifications were made to the ***/etc/ssh/sshd_config*** after making a copy of it:
   1. **PermitRootLogin** no:
 
-    - Prevents the root account from logging in directly through SSH.
+  - Prevents the root account from logging in directly through SSH.
     - This way an attacker can't directly target a highly privileged root account. They have to first compromise a regular account and then obtain elevated privileges to access it.
     - Adds an additional security barrier.
   
