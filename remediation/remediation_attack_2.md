@@ -11,7 +11,7 @@
 
 - As is clearly stated in the configuration file, ***PasswordAuthentication*** is set to ***yes***. Hence, globally the SSH policy for user authentication is that **PasswordAuthentication** is a possible option.
 - Because of this, the Ubuntu password associated with the **amaljp** admin account can be used to gain access it.
-- In order to remediate this security risk, a specific rule must be established for **amaljp**. At the bottom of the **sshd_config** after the Subsystem and global settings, the following is added:
+- In order to remediate this security risk, a **specific rule** must be established for **amaljp**. At the bottom of the **sshd_config** after the Subsystem and global settings, the following is added:
 
 
 <img width="645" height="337" alt="remediation2_scsht_2" src="https://github.com/user-attachments/assets/71173605-d7bc-479e-ae09-cf3c860e627b" />
@@ -25,7 +25,7 @@
 <img width="437" height="60" alt="remediation2_scsht_3" src="https://github.com/user-attachments/assets/05d34d31-c83a-4cec-a48f-f42b425faf49" />
 
 
-- Now to ensure that the **alice** and **bob** user accounts utilize the globally defined authentication settings the following commands are executed:
+- Now to ensure that the **alice** and **bob** user accounts utilize the **globally defined** authentication settings the following commands are executed:
  
 ***ssh alice@192.168.1.xx***
 
@@ -39,4 +39,4 @@
 <img width="527" height="76" alt="remediation2_scsht_5" src="https://github.com/user-attachments/assets/43a5db68-61a9-4f74-85a2-e16739c1cb2d" />
 
 
-- It is clear that **amaljp** has the SSH only authentication set up and the **alice** and **bob** accounts follow the globally enforced authentication policy.
+- It is clear that **amaljp** has the **SSH key only** authentication set up and the **alice** and **bob** accounts follow the globally enforced **password authentication** policy.
